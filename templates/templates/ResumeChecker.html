@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeChecker</title>
+    <style>
+        body{
+           text-align: center;
+           background-image: url('https://marketplace.canva.com/EAFHm4JWsu8/1/0/1600w/canva-pink-landscape-desktop-wallpaper-HGxdJA_xIx0.jpg');
+           padding: 40px 40px 40px 40px;
+           color: rgb(50, 50, 156);
+        }
+        form{
+            border: 5px rgb(74, 74, 172) double;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+     
+    {% if error %}  
+        <h1 style="color:red"><strong>Error: {{error}}</strong></h1>  
+    {% endif %} 
+    <br><br>
+    <h1>WELCOME TO RESUME CHECKER</h1>
+    
+    <h2>FORM</h2>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="filetype"><h3>Choose a filetype:</h3></label>
+        <select id="filetype" name="filetype">
+        <option value="none">None</option>   
+        <option value="pdf">PDF</option>
+        <option value="docx">DOCX</option>
+        </select>
+        <label for="filename"><h3>Upload file</h3></label>
+        <input type="file" name="file" required/>
+        <label for="jobdescription"><h3>Enter job description</h3></label>
+        <textarea name="jobdescription" required></textarea><br><br>
+        <button type="submit">SUBMIT</button>
+        
+    </form>
+</body>
+</html>

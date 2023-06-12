@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Score</title>
+    <style>
+        body{
+           text-align: center;
+           background-image: url('https://marketplace.canva.com/EAFHm4JWsu8/1/0/1600w/canva-pink-landscape-desktop-wallpaper-HGxdJA_xIx0.jpg');
+           padding: 40px 40px 40px 40px;
+           color: rgb(50, 50, 156);
+        }
+    </style>
+</head>
+<body>
+    <h2>Hey , we have succesfully calculated your matching percentage</h2>
+    <h3>{{result}}</h3>
+    <h3>Suggestions for keywords to use</h3>
+    <img src="{{url_for('static',filename = './img.png')}}" alt="wordcloud" height="300px" width="300px">
+</body>
+</html>
